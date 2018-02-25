@@ -9,7 +9,7 @@ assign temp1[7:0] = in[7:0];
 
 for(i=1; i<=7; i=i+1)
 begin
-always @ (*) begin
+  always @ (temp1[i]) begin
 if (temp1[i-1]== 1'b1) begin
 out[7:i] = ~ temp1[7:i];
 end
